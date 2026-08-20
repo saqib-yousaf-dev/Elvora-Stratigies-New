@@ -1,0 +1,25 @@
+- [x] Locate all current phone number and address references.
+- [x] Replace the phone number with 01615 150022 and add the Manchester office address.
+- [x] Verify the updated contact details and save a checkpoint.
+- [x] Add LinkedIn and phone-call icons beside WhatsApp in the footer.
+- [x] Verify the footer icons and save a checkpoint.
+- [ ] Review the supplied website upgrade brief and identify requested changes.
+- [ ] Implement the approved website upgrades from the brief.
+- [ ] Verify the upgraded website and save a checkpoint.
+- [x] Restore WhatsApp links to +44 7930 234660 while retaining 01615 150022 for phone calls.
+- [x] Verify footer contact actions and save a checkpoint.
+- [x] Add an email contact icon beside the existing footer contact icons.
+- [x] Verify the footer email action and save a checkpoint.
+- [x] Review all Buy Now and Stripe purchase actions across pricing and package pages.
+- [x] Remove purchase actions and retain Book a Demo as the Pulse entry point.
+- [x] Verify the simplified pricing journey and save a checkpoint.
+- [x] Remove invalid duplicate style values from the contact divider.
+- [x] Verify the corrected contact divider and save a checkpoint.
+- [x] Locate and update the phone-line message to welcome calls and explain Pulse’s role.
+- [x] Verify the updated message and save a checkpoint.
+- [x] Review GPTMate.ai as a design reference and map relevant patterns to Elvora.
+- [x] Document the selected redesign approach for Elvora’s Pulse website.
+- [x] Implement the responsive GPTMate-inspired redesign using Elvora branding.
+- [x] Verify desktop and mobile presentation, then save a checkpoint.
+- [x] Inspect the moving feature ticker and restore its animation.
+- [x] Verify ticker motion, save a checkpoint, and create an updated source ZIP.
