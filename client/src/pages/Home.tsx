@@ -8,7 +8,7 @@ import {
   Bot, Zap, Globe, Shield, ChevronRight, Mail,
   Linkedin, MessageSquare, Phone, ArrowRight, CheckCircle, Menu, X, Star, ChevronDown,
   LineChart, Briefcase, Home as HomeIcon, TrendingUp, Heart, PieChart, Activity, Lightbulb,
-  Database, Lock
+  Database, Lock, XCircle
 } from "lucide-react";
 
 // Correct logo path pointing to public/assets
@@ -87,13 +87,6 @@ const INDUSTRIES = [
   { name: "Consultancies", icon: Lightbulb },
 ];
 
-const STATS = [
-  { value: "24/7", label: "First Response" },
-  { value: "Bespoke", label: "Built for You" },
-  { value: "CRM", label: "Ready to Route" },
-  { value: "Human", label: "Tone by Design" },
-];
-
 const PROCESS = [
   { step: "01", title: "Discovery Call", desc: "We learn your business, tone, and goals in a focused 30-minute session." },
   { step: "02", title: "Custom Build", desc: "Your AI receptionist is trained exclusively on your business — no generic scripts." },
@@ -101,11 +94,20 @@ const PROCESS = [
   { step: "04", title: "Go Live", desc: "Your AI receptionist starts capturing and qualifying leads from day one." },
 ];
 
+// Direct Botpress-killer marquee items comparing Elvora's managed service against DIY tools
 const TICKER_ITEMS = [
-  "Always On — 24/7", "Bespoke to Your Business", "Qualifies Every Visitor",
-  "Books Appointments Live", "Flows Into Your CRM", "No Generic Scripts",
-  "Deployed in Under 2 Weeks", "Reads the Room Every Time", "Never Misses an Enquiry",
-  "Trained on Your Business", "Instant Lead Delivery", "Works While You Sleep",
+  "Better Than Botpress: 100% Fully Managed", 
+  "No Botpress Node Builders Required", 
+  "Beyond Botpress: Bespoke Enterprise Training", 
+  "Zero DIY Setup (Unlike Botpress)", 
+  "Dedicated Engineering Support vs Self-Serve", 
+  "Custom Code & Native CRM Sync", 
+  "No Drag-and-Drop Limitations", 
+  "Always On — 24/7", 
+  "Qualifies Every Visitor", 
+  "Books Appointments Live", 
+  "No Generic Templates", 
+  "Deployed For You in Under 2 Weeks"
 ];
 
 // ─── Floating Pulse Agent Button ──────────────────────────────────────────────
@@ -239,26 +241,32 @@ function Navbar() {
   );
 }
 
-// ─── Refined, Shorter Signal Bar ──────────────────────────────────────────────
+// ─── Mobile Optimized Signal Bar ──────────────────────────────────────────────
 function SignalBar() {
   return (
     <section className="pt-[80px] bg-white">
       <div className="border-b border-sky-100 bg-gradient-to-r from-sky-50/40 via-white to-amber-50/40">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-2 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
           
-          <div className="flex items-center gap-2.5">
-            <span className="relative flex h-2 w-2">
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="relative flex h-2 w-2 flex-shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <p className="text-xs font-semibold text-slate-600 tracking-wide uppercase">
-              Pulse is live <span className="text-slate-400 font-normal hidden md:inline">— managing instant website lead responses.</span>
+            <p className="text-[11px] sm:text-xs font-semibold text-slate-600 tracking-wide uppercase">
+              Pulse is live <span className="text-slate-400 font-normal hidden lg:inline">— managing instant website lead responses.</span>
             </p>
           </div>
 
-          <button onClick={openChatbot} className="group flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-amber-500 transition-colors uppercase tracking-wider">
-            Test Live Demo <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <a href="https://wa.me/447930234660" target="_blank" rel="noopener noreferrer" className="text-[11px] sm:text-xs font-bold text-green-600 hover:text-green-700 flex items-center gap-1 uppercase tracking-wider">
+              <MessageSquare size={13} /> <span className="hidden sm:inline">WhatsApp: +44 7930 234660</span><span className="sm:hidden">WhatsApp Us</span>
+            </a>
+            <span className="text-slate-300 hidden sm:inline">|</span>
+            <button onClick={openChatbot} className="group flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-sky-600 hover:text-amber-500 transition-colors uppercase tracking-wider">
+              Test Live Demo <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
 
         </div>
       </div>
@@ -279,7 +287,7 @@ function Hero() {
           <div className="max-w-3xl relative z-10">
             <div className="inline-flex items-center gap-2 border px-4 py-2 mb-8 rounded-full bg-white/50 backdrop-blur-md shadow-sm" style={{ borderColor: "#bae6fd" }}>
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#0ea5e9" }} />
-              <span className="text-xs font-bold tracking-[0.14em] uppercase text-slate-600">A trained AI receptionist for your website</span>
+              <span className="text-xs font-bold tracking-[0.14em] uppercase text-slate-600">The Fully Managed Alternative to Botpress & DIY Builders</span>
             </div>
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-950 leading-[1.05] tracking-tight mb-7 drop-shadow-sm" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -291,7 +299,7 @@ function Hero() {
             </h1>
             
             <p className="text-slate-600 text-lg lg:text-xl leading-relaxed max-w-2xl mb-10">
-              When you pay for a click, a static form isn't enough. Pulse handles the opening conversation, filters the noise, and hands over qualified data.
+              Stop wrestling with Botpress node editors and messy drag-and-drop builders. Elvora builds, deploys, and fully manages your custom AI receptionist from end to end.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -304,7 +312,7 @@ function Hero() {
             </div>
             
             <div className="flex flex-wrap gap-x-6 gap-y-3">
-              {["Trained on your business", "Routes to inbox or CRM", "Built for sensitive enquiries"].map((item) => (
+              {["100% managed by Elvora", "No Botpress builders required", "Dedicated expert support"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm font-medium text-slate-600">
                   <CheckCircle size={16} style={{ color: "#0ea5e9" }} />{item}
                 </div>
@@ -374,23 +382,37 @@ function Hero() {
   );
 }
 
-// ─── Enhanced Marquee Ticker ──────────────────────────────────────────────────
+// ─── Elite Seamless Data Stream Ticker (Botpress Killer) ─────────────────────
 function Ticker() {
   const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
   return (
-    <div className="py-5 overflow-hidden border-y bg-white relative shadow-inner" style={{ borderColor: "#bae6fd" }}>
-      {/* Edge gradient fade masks for high-end look */}
-      <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+    <div className="py-5 overflow-hidden bg-white border-y border-sky-100 relative shadow-sm">
+      
+      {/* Luxurious Edge Gradient Fade Masks */}
+      <div className="absolute top-0 bottom-0 left-0 w-36 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 bottom-0 right-0 w-36 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
 
-      <div className="pulse-ticker-track flex gap-14 whitespace-nowrap" style={{ width: "max-content" }}>
+      {/* Unbroken, smooth continuous telemetry stream */}
+      <div 
+        className="flex gap-16 whitespace-nowrap items-center hover:[animation-play-state:paused]" 
+        style={{ width: "max-content", animation: "marqueeScroll 45s linear infinite" }}
+      >
         {items.map((item, i) => (
-          <span key={i} className="flex items-center gap-3 text-xs md:text-sm font-black tracking-widest uppercase text-sky-900">
-            <span className="w-2 h-2 rounded-full flex-shrink-0 shadow-sm" style={{ background: "#F5A623" }} />
-            {item}
-          </span>
+          <div key={i} className="flex items-center gap-4 group cursor-default select-none">
+            <span className="text-xs md:text-sm font-extrabold tracking-[0.2em] uppercase text-slate-800 group-hover:text-amber-500 transition-colors">
+              {item}
+            </span>
+            <span className="w-2 h-2 rounded-full bg-[#F5A623] shadow-[0_0_10px_rgba(245,166,35,0.7)] flex-shrink-0 group-hover:scale-125 transition-transform" />
+          </div>
         ))}
       </div>
+
+      <style>{`
+        @keyframes marqueeScroll {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }
@@ -600,7 +622,6 @@ function About() {
           
           <div className="relative group">
             <div className="overflow-hidden aspect-[4/3] bg-sky-100 rounded-3xl border border-sky-200 relative shadow-inner">
-              {/* This automatically uses your image-2 asset */}
               <img src={ABOUT_VISUAL} alt="Elvora Strategies Team" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-tr from-sky-900/40 to-transparent mix-blend-overlay" />
               
@@ -665,16 +686,6 @@ function About() {
               >
                 Meet Pulse <ArrowRight size={18} />
               </button>
-              <a
-                href="https://wa.me/447930234660"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 font-semibold px-8 py-4 transition-all duration-200 text-gray-700 hover:border-green-400 hover:text-green-600 rounded-xl"
-                style={{ borderColor: "#bae6fd", background: "transparent" }}
-              >
-                <MessageSquare size={18} className="text-green-500" />
-                WhatsApp Us
-              </a>
             </div>
           </div>
         </div>
@@ -806,7 +817,7 @@ const PRICING_TIERS = [
     highlight: false,
     packageUrl: "/packages/starter",
     features: [
-      "One custom AI receptionist, trained on your business",
+      "One custom AI receptionist, fully managed",
       "Lead capture to your inbox, 24/7",
       "250 conversations per month",
       "Standard setup & onboarding",
@@ -1008,6 +1019,125 @@ function Pricing() {
   );
 }
 
+// ─── Elvora vs. Botpress Comparison Section (Light Elite UI) ─────────────────
+function CompetitorComparison() {
+  const comparisonRows = [
+    {
+      feature: "Setup & Architecture",
+      botpress: "Self-serve node editors, drag-and-drop complexity",
+      elvora: "100% Done-For-You custom engineering & deployment",
+    },
+    {
+      feature: "Training & Knowledge",
+      botpress: "Generic templates & manual prompt configuration",
+      elvora: "Trained exclusively on your business data, tone, and workflow",
+    },
+    {
+      feature: "Maintenance & Bugs",
+      botpress: "You troubleshoot your own webhooks and system downtime",
+      elvora: "Fully managed 24/7 monitoring, zero technical overhead",
+    },
+    {
+      feature: "CRM & System Sync",
+      botpress: "Requires third-party glue (Zapier) and manual webhook setups",
+      elvora: "Native CRM sync and direct inbox delivery built-in",
+    },
+    {
+      feature: "Support",
+      botpress: "Community forums or automated ticketing systems",
+      elvora: "Dedicated engineering support & direct expert team access",
+    },
+  ];
+
+  return (
+    <section className="py-32 bg-slate-50 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-sky-100/40 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-50/40 blur-[120px] rounded-full pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="text-xs font-black tracking-widest uppercase mb-4 block text-sky-500">
+            The Ultimate Standard
+          </span>
+          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Why Elvora Outshines <span className="text-amber-500">Botpress & DIY Builders</span>
+          </h2>
+          <p className="text-gray-500 text-lg md:text-xl">
+            Stop wasting hours wrestling with drag-and-drop node builders and self-serve templates. See how our white-glove managed service compares.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          {/* Competitor / Botpress Column */}
+          <div className="p-8 md:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col">
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-100">
+              <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-500">
+                <XCircle size={26} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: "'Playfair Display', serif" }}>Self-Serve / Botpress</h3>
+                <p className="text-xs text-slate-400 uppercase tracking-widest font-bold">The DIY Approach</p>
+              </div>
+            </div>
+
+            <div className="space-y-6 flex-1">
+              {comparisonRows.map((row, idx) => (
+                <div key={idx} className="space-y-2">
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{row.feature}</p>
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100 text-slate-600 text-sm">
+                    <XCircle size={18} className="text-red-400 flex-shrink-0 mt-0.5" />
+                    <span className="leading-relaxed">{row.botpress}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Elvora Column */}
+          <div className="p-8 md:p-10 rounded-3xl bg-white border-2 border-sky-400 shadow-[0_30px_80px_rgba(14,165,233,0.15)] flex flex-col relative z-10">
+            <div className="absolute -top-4 right-8 bg-[#F5A623] text-slate-900 text-xs font-black px-5 py-2 rounded-full uppercase tracking-widest shadow-lg">
+              The Clear Winner
+            </div>
+
+            <div className="flex items-center gap-3 mb-8 pb-6 border-b border-sky-100">
+              <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500 border border-amber-100">
+                <CheckCircle size={26} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-sky-900" style={{ fontFamily: "'Playfair Display', serif" }}>Elvora Strategies</h3>
+                <p className="text-xs text-sky-500 uppercase tracking-widest font-black">100% Fully Managed</p>
+              </div>
+            </div>
+
+            <div className="space-y-6 flex-1">
+              {comparisonRows.map((row, idx) => (
+                <div key={idx} className="space-y-2">
+                  <p className="text-xs font-black text-sky-400 uppercase tracking-wider">{row.feature}</p>
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-slate-700 text-sm font-medium">
+                    <CheckCircle size={18} className="text-[#F5A623] flex-shrink-0 mt-0.5" />
+                    <span className="leading-relaxed">{row.elvora}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-sky-100">
+              <button
+                onClick={openChatbot}
+                className="w-full py-5 font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(245,166,35,0.4)] rounded-xl text-slate-900 bg-[#F5A623]"
+              >
+                Experience the Elvora Standard
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Animated Process & ROI Calculator ───────────────────────────────────────
 function useAnimatedNumber(target: number, duration: number = 1000) {
   const [count, setCount] = useState(0);
@@ -1051,7 +1181,7 @@ function Process() {
               From Discovery to <span style={{ color: "#F5A623" }}>Live in Days</span>
             </h2>
             <p className="text-gray-500 text-xl leading-relaxed mb-12">
-              We engineer your business knowledge into a live first-response system. A frictionless pipeline that turns ad clicks into fully qualified prospects.
+              We engineer your business knowledge into a live first-response system. A frictionless pipeline that turns ad clicks into fully qualified prospects with zero DIY hassle.
             </p>
             
             <div className="flex flex-col gap-8 mb-10 relative">
@@ -1167,7 +1297,7 @@ function WhiteLabelling() {
             White Label <span className="text-amber-500">Pulse</span>
           </h2>
           <p className="text-gray-500 mt-6 text-lg md:text-xl leading-relaxed">
-            Resell Pulse under your own brand. We handle the complex AI infrastructure. You own the client relationship and the recurring revenue.
+            Resell Pulse under your own brand. We handle the complex AI infrastructure and maintenance. You own the client relationship and recurring revenue.
           </p>
         </div>
         
@@ -1177,10 +1307,10 @@ function WhiteLabelling() {
             <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Why Partner With Us?</h3>
             
             {[
-              { title: "Your Branding, Our Technology", desc: "Fully white-labelled interface. The chatbot operates under your logo, colours, and messaging." },
-              { title: "Recurring Revenue Stream", desc: "Access wholesale margin-based pricing. You set your retail price, we handle the delivery." },
-              { title: "Zero Technical Overhead", desc: "We manage the servers, LLM updates, bug fixes, and data compliance. You focus on sales." },
-              { title: "Dedicated Partner Support", desc: "Direct priority access to our engineering team for custom feature requests and onboarding." }
+              { title: "Your Branding, Our Technology", desc: "Fully white-labelled interface operating under your logo, colors, and messaging." },
+              { title: "Recurring Revenue Stream", desc: "Access wholesale pricing. You set your retail price, we handle 100% of the tech delivery." },
+              { title: "Zero Technical Overhead", desc: "We manage servers, model updates, security, and maintenance. No DIY headaches." },
+              { title: "Dedicated Partner Support", desc: "Direct priority access to our engineering team for custom feature requests." }
             ].map((feature, i) => (
               <div key={i} className="group p-6 rounded-2xl bg-white border border-sky-100 shadow-sm transition-all duration-300 hover:shadow-md hover:border-amber-200 hover:-translate-y-1">
                 <div className="flex items-start gap-5">
@@ -1243,7 +1373,7 @@ function WhiteLabelling() {
   );
 }
 
-// ─── Elite FAQ ────────────────────────────────────────────────────────────────
+// ─── Elite FAQ ("We Believe in Pulse" Section with WhatsApp integration) ───────
 function FAQ() {
   return (
     <section className="py-32 relative overflow-hidden bg-white">
@@ -1266,15 +1396,29 @@ function FAQ() {
             We Believe in <span className="text-amber-500">Pulse</span>
           </h2>
           <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Pulse handles everything — from the first conversation to the final handoff. If you have questions about how it works, how it integrations, or what it can do for your business, just ask Pulse directly. We use our own product because it works.
+            Pulse handles everything — from the first conversation to the final handoff. If you have questions about how it works, how it integrates, or what it can do for your business, talk to us directly via chat or WhatsApp.
           </p>
-          <button
-            onClick={openChatbot}
-            className="inline-flex items-center gap-3 font-bold text-sm uppercase tracking-widest px-10 py-5 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,166,35,0.3)] rounded-xl text-slate-900"
-            style={{ background: "#F5A623" }}
-          >
-            <MessageSquare size={20} /> Ask Pulse Your Questions
-          </button>
+
+          {/* Dual Action Buttons: Meet Pulse & Direct WhatsApp */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onClick={openChatbot}
+              className="inline-flex items-center justify-center gap-3 font-bold text-sm uppercase tracking-widest px-8 py-5 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(245,166,35,0.3)] rounded-xl text-slate-900 w-full sm:w-auto"
+              style={{ background: "#F5A623" }}
+            >
+              <MessageSquare size={20} /> Ask Pulse Your Questions
+            </button>
+
+            <a
+              href="https://wa.me/447930234660"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 font-bold text-sm uppercase tracking-widest px-8 py-5 transition-all duration-300 hover:scale-105 rounded-xl border-2 text-green-700 bg-white w-full sm:w-auto shadow-sm hover:shadow-md"
+              style={{ borderColor: "#22c55e" }}
+            >
+              <MessageSquare size={20} className="text-green-600" /> Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1415,13 +1559,16 @@ function Footer() {
               20 Swan Street, Manchester, M4 5JW
             </address>
             <div className="flex items-center gap-3">
-              <a href="mailto:info@elvorastrategies.com" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors">
+              <a href="mailto:info@elvorastrategies.com" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors" aria-label="Email Us">
                 <Mail size={16} />
               </a>
-              <a href="https://www.linkedin.com/company/elvora-strategies" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors">
+              <a href="https://wa.me/447930234660" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-xl bg-green-50 text-green-600 hover:bg-green-100 hover:text-green-700 transition-colors" aria-label="WhatsApp Us">
+                <MessageSquare size={16} />
+              </a>
+              <a href="https://www.linkedin.com/company/elvora-strategies" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors" aria-label="LinkedIn Profile">
                 <Linkedin size={16} />
               </a>
-              <a href="tel:+441615150022" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors">
+              <a href="tel:+441615150022" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors" aria-label="Call Us">
                 <Phone size={16} />
               </a>
             </div>
@@ -1452,6 +1599,7 @@ export default function Home() {
       <About />
       <Testimonials />
       <Pricing />
+      <CompetitorComparison />
       <Process />
       <WhiteLabelling />
       <FAQ />
