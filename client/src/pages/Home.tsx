@@ -1606,8 +1606,11 @@ export default function Home() {
       <DataSecurity />
       <Contact />
       <Footer />
-      {/* Permanent Floating Pulse Agent */}
-      <FloatingChatbot />
+      {/* 
+        FloatingChatbot has been disabled because the Elvora widget.js script 
+        in index.html automatically generates its own chat bubble on the screen.
+      */}
+      {/* <FloatingChatbot /> */}
     </div>
   );
 }
