@@ -18,7 +18,6 @@ import ServiceLeadQualification from "./pages/ServiceLeadQualification";
 import ServiceAppointmentBooking from "./pages/ServiceAppointmentBooking";
 import ServiceCrmIntegration from "./pages/ServiceCrmIntegration";
 
-
 // --- New Service Pages ---
 import ServiceChatbot from "./pages/ServiceChatbot";
 
@@ -28,12 +27,21 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={BlogPost} />
-      
+
       {/* Services */}
       <Route path={"/services/chatbot"} component={ServiceChatbot} />
-      <Route path={"/services/lead-qualification"} component={ServiceLeadQualification} />
-      <Route path={"/services/appointment-booking"} component={ServiceAppointmentBooking} />
-      <Route path={"/services/crm-integration"} component={ServiceCrmIntegration} />
+      <Route
+        path={"/services/lead-qualification"}
+        component={ServiceLeadQualification}
+      />
+      <Route
+        path={"/services/appointment-booking"}
+        component={ServiceAppointmentBooking}
+      />
+      <Route
+        path={"/services/crm-integration"}
+        component={ServiceCrmIntegration}
+      />
 
       {/* Packages */}
       <Route path={"/packages/starter"} component={PackageStarter} />
@@ -46,7 +54,7 @@ function Router() {
       <Route path={"/data-security"} component={DataSecurity} />
       <Route path={"/privacy-policy"} component={PrivacyPolicy} />
       <Route path={"/terms-of-use"} component={TermsOfUse} />
-      
+
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

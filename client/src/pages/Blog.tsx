@@ -3,7 +3,14 @@
  * Elite Agency Light UI with 3D Transparent Logo & 4-Column Enterprise Footer
  */
 import { Link } from "wouter";
-import { ArrowRight, Calendar, Clock, Mail, Linkedin, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  Clock,
+  Mail,
+  Linkedin,
+  Phone,
+} from "lucide-react";
 import { useEffect } from "react";
 
 const LOGO = "/assets/elvora_icon_transparent.png";
@@ -18,11 +25,13 @@ export const BLOG_POSTS = [
     slug: "ai-chatbot-for-law-firms-uk",
     title: "Why Every UK Law Firm Needs an AI Chatbot Receptionist in 2026",
     metaTitle: "AI Chatbot for Law Firms UK | Elvora Strategies",
-    metaDesc: "Discover how AI chatbot receptionists are helping UK law firms capture more leads, respond faster, and never miss a client enquiry — 24 hours a day.",
+    metaDesc:
+      "Discover how AI chatbot receptionists are helping UK law firms capture more leads, respond faster, and never miss a client enquiry — 24 hours a day.",
     category: "Law Firms",
     date: "July 2026",
     readTime: "5 min read",
-    excerpt: "Law firms across the UK are losing potential clients every day — not because of their service, but because no one answers the phone at 9pm on a Tuesday. An AI chatbot receptionist changes that.",
+    excerpt:
+      "Law firms across the UK are losing potential clients every day — not because of their service, but because no one answers the phone at 9pm on a Tuesday. An AI chatbot receptionist changes that.",
     content: `
 ## The Problem Every Law Firm Recognises
 
@@ -68,13 +77,17 @@ If your firm receives more than 20 enquiries per month and you don't have a 24/7
   },
   {
     slug: "ai-receptionist-small-business-manchester",
-    title: "AI Receptionist for Small Business: How Manchester Firms Are Winning More Clients",
-    metaTitle: "AI Receptionist for Small Business Manchester | Elvora Strategies",
-    metaDesc: "Small businesses in Manchester are using AI receptionists to compete with larger firms — capturing leads 24/7 without hiring extra staff. Here's how it works.",
+    title:
+      "AI Receptionist for Small Business: How Manchester Firms Are Winning More Clients",
+    metaTitle:
+      "AI Receptionist for Small Business Manchester | Elvora Strategies",
+    metaDesc:
+      "Small businesses in Manchester are using AI receptionists to compete with larger firms — capturing leads 24/7 without hiring extra staff. Here's how it works.",
     category: "Small Business",
     date: "July 2026",
     readTime: "4 min read",
-    excerpt: "You don't need a team of receptionists to respond like a large firm. Manchester's fastest-growing small businesses are using AI to punch above their weight — and it's working.",
+    excerpt:
+      "You don't need a team of receptionists to respond like a large firm. Manchester's fastest-growing small businesses are using AI to punch above their weight — and it's working.",
     content: `
 ## The Small Business Receptionist Problem
 
@@ -120,13 +133,16 @@ Book a demo with Elvora Strategies and see what a bespoke AI receptionist would 
   },
   {
     slug: "lead-capture-chatbot-northwest-england",
-    title: "Lead Capture Chatbot for Northwest England Businesses: The Complete Guide",
+    title:
+      "Lead Capture Chatbot for Northwest England Businesses: The Complete Guide",
     metaTitle: "Lead Capture Chatbot Northwest England | Elvora Strategies",
-    metaDesc: "A complete guide to lead capture chatbots for businesses in Northwest England — what they do, how they work, and why they outperform contact forms and phone lines.",
+    metaDesc:
+      "A complete guide to lead capture chatbots for businesses in Northwest England — what they do, how they work, and why they outperform contact forms and phone lines.",
     category: "Lead Generation",
     date: "August 2026",
     readTime: "6 min read",
-    excerpt: "Contact forms convert at 1–3%. Phone lines go unanswered. A lead capture chatbot changes the equation entirely — here's everything Northwest England businesses need to know.",
+    excerpt:
+      "Contact forms convert at 1–3%. Phone lines go unanswered. A lead capture chatbot changes the equation entirely — here's everything Northwest England businesses need to know.",
     content: `
 ## Why Traditional Lead Capture Is Broken
 
@@ -189,17 +205,31 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Elite Navbar */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b px-6 lg:px-10 py-4 flex items-center justify-between shadow-sm" style={{ borderColor: "#e0f2fe" }}>
+      <nav
+        className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b px-6 lg:px-10 py-4 flex items-center justify-between shadow-sm"
+        style={{ borderColor: "#e0f2fe" }}
+      >
         <Link href="/">
           <span className="flex items-center gap-3 cursor-pointer group">
-            <img src={LOGO} alt="Elvora Strategies" className="h-10 w-auto transition-transform duration-500 group-hover:scale-105" />
-            <span className="font-bold text-xl text-gray-900 tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            <img
+              src={LOGO}
+              alt="Elvora Strategies"
+              className="h-10 w-auto transition-transform duration-500 group-hover:scale-105"
+            />
+            <span
+              className="font-bold text-xl text-gray-900 tracking-tight"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
               Elvora <span style={{ color: "#F5A623" }}>Strategies</span>
             </span>
           </span>
         </Link>
         <div className="flex items-center gap-6">
-          <Link href="/"><span className="text-sm font-semibold text-gray-600 hover:text-sky-600 transition-colors cursor-pointer">Home</span></Link>
+          <Link href="/">
+            <span className="text-sm font-semibold text-gray-600 hover:text-sky-600 transition-colors cursor-pointer">
+              Home
+            </span>
+          </Link>
           <button
             onClick={openChatbot}
             className="font-bold text-sm px-6 py-2.5 transition-all duration-300 hover:scale-105 rounded-xl shadow-sm"
@@ -211,17 +241,29 @@ export default function Blog() {
       </nav>
 
       {/* Elite Hero Section */}
-      <section className="relative py-24 px-6 lg:px-10 overflow-hidden text-center text-white" style={{ background: "linear-gradient(135deg, #0ea5e9 0%, #0284c7 60%, #0369a1 100%)" }}>
+      <section
+        className="relative py-24 px-6 lg:px-10 overflow-hidden text-center text-white"
+        style={{
+          background:
+            "linear-gradient(135deg, #0ea5e9 0%, #0284c7 60%, #0369a1 100%)",
+        }}
+      >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-white/10 blur-[100px] rounded-full pointer-events-none" />
         <div className="relative max-w-4xl mx-auto">
           <span className="inline-block text-xs font-bold tracking-widest uppercase mb-4 px-4 py-1.5 border border-white/30 rounded-full text-white/90 bg-white/10 backdrop-blur-md">
             Resource Hub &amp; Insights
           </span>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Insights on AI Automation <br /><span style={{ color: "#F5A623" }}>for UK Business</span>
+          <h1
+            className="text-5xl lg:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Insights on AI Automation <br />
+            <span style={{ color: "#F5A623" }}>for UK Business</span>
           </h1>
           <p className="text-white/80 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
-            Practical guides on AI chatbots, lead capture, and automation — written for law firms, estate agents, accountants, and businesses across the UK.
+            Practical guides on AI chatbots, lead capture, and automation —
+            written for law firms, estate agents, accountants, and businesses
+            across the UK.
           </p>
         </div>
       </section>
@@ -230,17 +272,33 @@ export default function Blog() {
       <section className="py-24 px-6 lg:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {BLOG_POSTS.map((post) => (
+            {BLOG_POSTS.map(post => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
-                <article className="bg-white border rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-h-full flex flex-col group h-full" style={{ borderColor: "#e0f2fe", borderTop: "4px solid #F5A623" }}>
+                <article
+                  className="bg-white border rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-h-full flex flex-col group h-full"
+                  style={{
+                    borderColor: "#e0f2fe",
+                    borderTop: "4px solid #F5A623",
+                  }}
+                >
                   <div className="p-8 flex flex-col flex-1">
                     <div className="mb-4">
-                      <span className="text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full border" style={{ background: "#f0f9ff", color: "#0369a1", borderColor: "#bae6fd" }}>
+                      <span
+                        className="text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full border"
+                        style={{
+                          background: "#f0f9ff",
+                          color: "#0369a1",
+                          borderColor: "#bae6fd",
+                        }}
+                      >
                         {post.category}
                       </span>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-sky-600 transition-colors leading-snug flex-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h2
+                      className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-sky-600 transition-colors leading-snug flex-1"
+                      style={{ fontFamily: "'Playfair Display', serif" }}
+                    >
                       {post.title}
                     </h2>
 
@@ -248,10 +306,19 @@ export default function Blog() {
                       {post.excerpt}
                     </p>
 
-                    <div className="flex items-center justify-between mt-auto pt-4 border-t" style={{ borderColor: "#f0f9ff" }}>
+                    <div
+                      className="flex items-center justify-between mt-auto pt-4 border-t"
+                      style={{ borderColor: "#f0f9ff" }}
+                    >
                       <div className="flex items-center gap-4 text-xs font-semibold text-gray-400">
-                        <span className="flex items-center gap-1"><Calendar size={13} />{post.date}</span>
-                        <span className="flex items-center gap-1"><Clock size={13} />{post.readTime}</span>
+                        <span className="flex items-center gap-1">
+                          <Calendar size={13} />
+                          {post.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock size={13} />
+                          {post.readTime}
+                        </span>
                       </div>
                       <span className="flex items-center gap-1 text-xs font-bold text-sky-600 group-hover:translate-x-1 transition-transform">
                         Read Article <ArrowRight size={14} />
@@ -266,62 +333,148 @@ export default function Blog() {
       </section>
 
       {/* Elite Call to Action */}
-      <section className="relative py-24 px-6 lg:px-10 overflow-hidden text-center text-white" style={{ background: "#1e3a5f" }}>
+      <section
+        className="relative py-24 px-6 lg:px-10 overflow-hidden text-center text-white"
+        style={{ background: "#1e3a5f" }}
+      >
         <div className="max-w-2xl mx-auto">
-          <span className="text-xs font-bold tracking-widest uppercase mb-3 block text-amber-400">Transform Your Enquiries</span>
-          <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <span className="text-xs font-bold tracking-widest uppercase mb-3 block text-amber-400">
+            Transform Your Enquiries
+          </span>
+          <h2
+            className="text-4xl font-bold mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             Ready to experience Pulse live?
           </h2>
-          <button onClick={openChatbot} className="inline-flex items-center gap-2 font-bold text-sm px-9 py-4 rounded-xl shadow-lg transition-transform hover:scale-105" style={{ background: "#F5A623", color: "#1a1a1a" }}>
+          <button
+            onClick={openChatbot}
+            className="inline-flex items-center gap-2 font-bold text-sm px-9 py-4 rounded-xl shadow-lg transition-transform hover:scale-105"
+            style={{ background: "#F5A623", color: "#1a1a1a" }}
+          >
             Chat with Pulse Now
           </button>
         </div>
       </section>
 
       {/* Elite 4-Column Footer */}
-      <footer className="pt-20 pb-12 border-t bg-white" style={{ borderColor: "#e0f2fe" }}>
+      <footer
+        className="pt-20 pb-12 border-t bg-white"
+        style={{ borderColor: "#e0f2fe" }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <img src={LOGO} alt="Elvora Strategies logo" className="h-10 w-auto" />
-                <span className="font-bold text-lg text-gray-900 tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <img
+                  src={LOGO}
+                  alt="Elvora Strategies logo"
+                  className="h-10 w-auto"
+                />
+                <span
+                  className="font-bold text-lg text-gray-900 tracking-tight"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
                   Elvora <span style={{ color: "#F5A623" }}>Strategies</span>
                 </span>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
-                Engineered AI chatbot receptionists capturing and qualifying high-intent leads 24/7 for elite service firms.
+                Engineered AI chatbot receptionists capturing and qualifying
+                high-intent leads 24/7 for elite service firms.
               </p>
             </div>
             <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">Navigation</p>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">
+                Navigation
+              </p>
               <ul className="space-y-3 text-sm font-medium text-slate-600">
-                <li><Link href="/#services"><span className="hover:text-amber-500 transition-colors cursor-pointer">Capabilities</span></Link></li>
-                <li><Link href="/#industries"><span className="hover:text-amber-500 transition-colors cursor-pointer">Industries</span></Link></li>
-                <li><Link href="/#pricing"><span className="hover:text-amber-500 transition-colors cursor-pointer">Pricing Tiers</span></Link></li>
+                <li>
+                  <Link href="/#services">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Capabilities
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#industries">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Industries
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#pricing">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Pricing Tiers
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">Compliance</p>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">
+                Compliance
+              </p>
               <ul className="space-y-3 text-sm font-medium text-slate-600">
-                <li><Link href="/privacy-policy"><span className="hover:text-amber-500 transition-colors cursor-pointer">Privacy Policy</span></Link></li>
-                <li><Link href="/terms-of-use"><span className="hover:text-amber-500 transition-colors cursor-pointer">Terms of Use</span></Link></li>
-                <li><Link href="/data-security"><span className="hover:text-amber-500 transition-colors cursor-pointer">Data &amp; Security</span></Link></li>
+                <li>
+                  <Link href="/privacy-policy">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Privacy Policy
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms-of-use">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Terms of Use
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/data-security">
+                    <span className="hover:text-amber-500 transition-colors cursor-pointer">
+                      Data &amp; Security
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
-              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">Manchester Office</p>
+              <p className="text-xs font-black uppercase tracking-widest text-sky-600 mb-5">
+                Manchester Office
+              </p>
               <address className="not-italic text-sm text-slate-500 leading-relaxed mb-4">
-                First Floor, Swan Buildings,<br /> 20 Swan Street, Manchester, M4 5JW
+                First Floor, Swan Buildings,
+                <br /> 20 Swan Street, Manchester, M4 5JW
               </address>
               <div className="flex items-center gap-3">
-                <a href="mailto:info@elvorastrategies.com" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"><Mail size={16} /></a>
-                <a href="https://www.linkedin.com/company/elvora-strategies" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"><Linkedin size={16} /></a>
-                <a href="tel:+441615150022" className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"><Phone size={16} /></a>
+                <a
+                  href="mailto:info@elvorastrategies.com"
+                  className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                >
+                  <Mail size={16} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/elvora-strategies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                >
+                  <Linkedin size={16} />
+                </a>
+                <a
+                  href="tel:+441615150022"
+                  className="w-9 h-9 flex items-center justify-center rounded-xl bg-sky-50 text-sky-600 hover:bg-amber-100 hover:text-amber-600 transition-colors"
+                >
+                  <Phone size={16} />
+                </a>
               </div>
             </div>
           </div>
-          <div className="border-t pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-400" style={{ borderColor: "#f0e8d8" }}>
+          <div
+            className="border-t pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-400"
+            style={{ borderColor: "#f0e8d8" }}
+          >
             <p>© 2026 Elvora Strategies Ltd. All rights reserved.</p>
             <p>Manchester, United Kingdom</p>
           </div>
